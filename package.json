@@ -11,7 +11,6 @@
 	},
 	"homepage": "https://github.com/CasparCG/media-scanner",
 	"scripts": {
-		"postinstall": "husky",
 		"dev": "nodemon ./src",
 		"build": "run build:ts && node tools/build.mjs",
 		"build:ts": "rimraf dist && tsc -b tsconfig.build.json",
