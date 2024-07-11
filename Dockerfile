@@ -4,7 +4,7 @@ FROM node:18
   ENV PATHS__FFMPEG ffmpeg
   ENV PATHS__FFPROBE ffmpeg
 
-  COPY package.json package-lock.json ./
+  COPY package.json yarn.lock ./
   RUN sed -i -e 's/^  "version": "[0-9.]\+",$//' package.json
   RUN yarn install && \
       apt-get update && \
