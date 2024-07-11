@@ -20,11 +20,13 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - checkout: self
     - task: Docker@2
       displayName: Build an image
       inputs:
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        buildContext: '$(Build.SourcesDirectory)'
         containerRegistry: docker
         repository: casparcg-media-server
         tags: |
