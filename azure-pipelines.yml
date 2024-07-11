@@ -28,6 +28,6 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         buildContext: '$(Build.SourcesDirectory)'
         containerRegistry: docker
-        repository: casparcg-media-server
+        repository: nisarmed/casparcg-media-server
         tags: |
           $(tag)
